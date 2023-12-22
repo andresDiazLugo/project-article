@@ -1,0 +1,54 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.navegacion {
+  display: flex;
+  flex-direction: column;
+
+  @include m.desktop {
+    flex-direction: row;
+  }
+  &__enlace {
+    font-family: v.$fuente-principal;
+    font-size: 2.2rem;
+    color: #ffffff;
+    padding: 0 2rem 0 2rem;
+    margin: 0 1rem;
+  }
+  &__enlace:hover {
+    color:#339dff;
+    border-radius: 3rem;
+    background: rgb(43, 43, 43);
+    margin: 0 1rem;
+    padding: 0 2rem 0 2rem;
+    transition: 0.7s;
+    -webkit-box-shadow: 0px 1px 20px 5px #007df4;
+    -moz-box-shadow: 0px 1px 20px 5px #007df4;
+    box-shadow: 0px 1px 20px 5px #007df4;
+  }
+  &__micuenta{
+    font-family: v.$fuente-roboto;
+    color: v.$negro;
+    font-size: 2.6rem;
+    border-radius: 3rem;
+    background: #ffffff;
+    margin: 0 1rem;
+    padding: 0 2rem 0 2rem;
+    font-weight: 500;
+    transition: all 0.4s ease 0s;
+  }
+  &__micuenta:hover{
+    font-family: v.$fuente-roboto;
+    color: v.$negro;
+    font-size: 2.6rem;
+    border-radius: 3rem;
+    background: #ffffff;
+    margin: 0 1rem;
+    padding: 0 2rem 0 2rem;
+    transform: scale(1.1);
+    font-weight: 500;
+    -webkit-box-shadow: 0px 1px 15px 5px #007df4;
+    -moz-box-shadow: 0px 1px 15px 5px #007df4;
+    box-shadow: 0px 1px 15px 5px #007df4;
+  }
+}

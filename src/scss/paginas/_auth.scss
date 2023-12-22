@@ -1,0 +1,21 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+body{
+    background-color: v.$negro;
+}
+.auth{
+    @include m.contenedor-sm;
+    &__heading{
+        @include m.nombre-pagina;
+        padding: 1rem;
+    }
+
+}
+
+.auth__texto{
+ font-size: 2rem;
+ text-align: center;
+ color: v.$blanco;
+}
+

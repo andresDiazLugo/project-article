@@ -1,0 +1,29 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.barra {
+  background-color: v.$gris-oscuro;
+  border-radius: 25px;
+
+box-shadow:  -5px -5px 14px #3b9bc4,
+             5px 5px 14px #007df4;
+  
+  &__contenido {
+    @include m.contenedor;
+    display: flex;
+    flex-direction: column;
+    @include m.desktop{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+  }
+  &__logo{
+    
+    @include m.logo;
+    
+  }
+}
+
+
