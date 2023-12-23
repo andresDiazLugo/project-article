@@ -1,0 +1,20 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.menu-redes{
+    @include m.menu-social(v.$azul-claro, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    
+}
+
+.menu-border{
+    display: flex;
+    gap: 2rem;
+    border-left: 1px solid #fffcfc;
+    padding-left: 1rem;
+    justify-content: center;
+
+}

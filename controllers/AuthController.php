@@ -212,6 +212,28 @@ class AuthController {
         ]);
     }
 
+        public static function inicio(Router $router) {
+    
+            $router->render('auth/inicio', [
+                'titulo' => 'Home'
+            ]);
+        }
+        public static function descargar(Router $router) {
+    
+            $router->render('auth/descargar', [
+                'titulo' => 'Descagar Juego'
+            ]);
+        }
+        public static function reglas(Router $router) {
+    
+            $router->render('auth/reglas', [
+                'titulo' => 'Reglamento'
+            ]);
+        }
+        
+    
+    
+
     public static function confirmar(Router $router) {
         
         $token = s($_GET['token']);
