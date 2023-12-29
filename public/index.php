@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require_once __DIR__ . '/../includes/app.php';
 
@@ -25,9 +25,9 @@ $router->post('/descargar', [AuthController::class, 'descargar']);
 $router->get('/reglas', [AuthController::class, 'reglas']);
 $router->post('/reglas', [AuthController::class, 'reglas']);
 
-// Crear Cuenta
-// $router->get('/registro', [AuthController::class, 'registro']);
-// $router->post('/registro', [AuthController::class, 'registro']);
+//Crear Cuenta
+$router->get('/registro', [AuthController::class, 'registro']);
+$router->post('/registro', [AuthController::class, 'registro']);
 
 // Formulario de olvide mi password
 // $router->get('/olvide', [AuthController::class, 'olvide']);

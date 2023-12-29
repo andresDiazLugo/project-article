@@ -7,14 +7,19 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
+    @include m.tablet{
+    justify-content: flex-end;
+    }
     
 }
 
 .menu-border{
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     border-left: 1px solid #fffcfc;
     padding-left: 1rem;
-    justify-content: center;
-
+    @include m.tablet{
+        justify-content: center;
+    }
+    
 }
