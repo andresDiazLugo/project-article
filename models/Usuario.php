@@ -101,8 +101,9 @@ class Usuario extends ActiveRecord {
     // }
 
     // // Comprobar el password
-    public function comprobar_password() : bool {
-        return password_verify($this->password_actual, $this->password );
+    public function comprobar_password($passwordDB) : bool {
+        return $passwordDB == $this->password;
+        // return password_verify($this->password_actual, $this->password );
     }
 
     // // Hashea el password

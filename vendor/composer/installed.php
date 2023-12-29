@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'admin/bz-pcu-001',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '3e171f70ba2c4445ee9e7e94e0b6d96dabec2251',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'admin/bz-pcu-001' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '3e171f70ba2c4445ee9e7e94e0b6d96dabec2251',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

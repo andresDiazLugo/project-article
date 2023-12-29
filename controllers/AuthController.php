@@ -41,32 +41,34 @@ class AuthController
 
             $usuario = new Usuario($_POST);
 
-            echo($usuario->username);
-
             $alertas = $usuario->validarLogin();
 
             if (empty($alertas)) {
                 // Verificar quel el usuario exista
-                $usuario = Usuario::where('username', $usuario->username);
+                $foundUser = Usuario::where('username', $usuario->username);
                
-                if (!$usuario) {
+                if (!$foundUser) {
                     Usuario::setAlerta('error', 'El Usuario No Existe');
                 } else {
+
                     // El Usuario existe
-                    if (password_verify($_POST['password'], $usuario->password)) {
+                    if ($usuario->comprobar_password($foundUser->password)) {
 
                         // Iniciar la sesión
                         session_start();
-                        $_SESSION['id'] = $usuario->id;
-                        $_SESSION['username'] = $usuario->username;
-                        $_SESSION['admin'] = $usuario->admin ?? null;
+                        $_SESSION['id'] = $foundUser->id;
+                        $_SESSION['username'] =$foundUser->username;
+                        $_SESSION['admin'] = 1;
 
                         // Redirección 
-                        // if($usuario->admin) {
-                        //     header('Location: /admin/cuenta');
-                        // } else {
-                        //     header('Location: /cuenta');
-                        // }
+                        if($foundUser->admin > 0) {
+                            echo("inicio sesion el usuario admin");
+                            // header('Location: /admin/cuenta');
+                        } else {
+                            // header('Location: /cuenta');
+                            echo("inicio sesion el usuario comun");
+
+                        }
 
                     } else {
                         Usuario::setAlerta('error', 'Password Incorrecto');

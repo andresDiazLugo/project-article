@@ -1,0 +1,17 @@
+# Archivos generados por PHP
+*.log
+*.pot
+*.potx
+*.~lock.*
+*.swp
+
+# Directorios de dependencias de Composer
+/vendor/
+
+# Dependencias de Node.js
+node_modules/
+
+# Archivos generados por JavaScript
+*.js.map
+*.min.js
+*.min.css
